@@ -21,9 +21,19 @@ public class TreeLeetCodeExample {
         subTree.left = new TreeNode(6);
         subTree.right = new TreeNode(7);
         System.out.println(isSubTree(treeNode, subTree));
+        TreeNode treeNode1 = invertTree(treeNode);
+        System.out.println(treeNode1);
 
     }
-
+    public static TreeNode invertTree(TreeNode root) {
+        if(root == null) {
+            return null;
+        }
+        TreeNode left = root.left;
+        root.left = invertTree(root.right);
+        root.right = invertTree(left);
+        return root;
+    }
     private static boolean isSubTree(TreeNode mainTree, TreeNode subTree) {
         if(subTree == null) return true;
         if(mainTree == null) return false;

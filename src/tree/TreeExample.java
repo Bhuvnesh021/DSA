@@ -6,7 +6,7 @@ import java.util.Queue;
 public class TreeExample {
 
     public static void main(String[] args) {
-        int[] data = {1,2,3,-1,-1,2,-1,-1,4,5,-1,-1,6,1,9,-1,-1, -1, -1};
+        int[] data = {1,2,3,-1,-1,2,-1,-1,4,5,-1,-1,6,-1,-1};
         BinaryTree tree = new BinaryTree();
         Node node = tree.buildTree(data);
         preorder(node);
