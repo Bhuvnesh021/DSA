@@ -26,7 +26,7 @@ public class CounterIncrementProblem {
     private void increment() {
         reentrantLock.lock();
         for (int i = 0; i < 5; i++) {
-            System.out.println("Counter Incremented By : "+ Thread.currentThread().getName());
+            System.out.println("Counter Incremented By : "+ counter + " " + Thread.currentThread().getName());
             counter++;
             try {
                 Thread.sleep(500);
